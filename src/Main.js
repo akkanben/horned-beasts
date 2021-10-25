@@ -34,7 +34,11 @@ for (let i = 0; i < data.length; i++) {
 
 class Main extends Component {
   render() {
-    return beastsArray;
+    return (
+      <main>
+        {beastsArray}
+      </main>
+    )
   }
 }
 

@@ -2,7 +2,11 @@ import {Component} from "react";
 
 class Header extends Component {
   render() {
-    return <h1>Hello Horned Beasts</h1>;
+    return (
+      <header>
+        <h1>Hello Horned Beasts</h1>
+      </header>
+    )
   };
 
 }
