@@ -56,8 +56,8 @@ Number and name of feature: #3 Make it Pretty
 
 - Estimate of time needed to complete: 30 minutes
 - Start time: 2:05PM
-- Finish time: 
-- Actual time needed to complete:
+- Finish time: 2:40PM
+- Actual time needed to complete: 35 minutes
 
 ### Stretch Goal: Fuzzy Search
 

@@ -12,9 +12,9 @@ class Main extends Component {
         <Container fluid>
           <Row>
             {
-              data.map(element => {
+              data.map((element) => {
                 return (
-                  <Col>
+                  <Col >
                     <HornedBeasts title={element.title} imageUrl={element.image_url} description={element.description} />
                   </Col>
                 )
