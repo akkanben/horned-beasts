@@ -2,7 +2,7 @@ import {Component} from "react";
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 
-class PhotoModal extends Component {
+class SelectedBeast extends Component {
 
   render() {
     return (
@@ -12,6 +12,7 @@ class PhotoModal extends Component {
         </Modal.Header>
         <Modal.Body>
           <img style={{width: '100%'}} src={this.props.imageUrl} alt={this.props.description} />
+          {this.props.description}
         </Modal.Body>
         <Modal.Footer>
           <Button onClick={this.props.hideModal}>Close</Button>
@@ -21,4 +22,4 @@ class PhotoModal extends Component {
   };
 }
 
-export default PhotoModal;
+export default SelectedBeast;
