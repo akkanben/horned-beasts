@@ -47,3 +47,23 @@ Number and name of feature: #3 Make it Pretty
 
 - Added a dropdown theme chooser to the nav that let's the user choose one of three navbar themes. 
 - Added a clickable footer that chooses a random color from an array of hard-coded colors.
+
+## Class 03
+
+### Feature 1 Display a Modal 
+
+"As a user, I want the image to be displayed in a larger size and with the description shown so that I can view the details of a single image."
+
+- Estimate of time needed to complete: 30 minutes
+- Start time: 2:05PM
+- Finish time: 
+- Actual time needed to complete:
+
+### Stretch Goal: Fuzzy Search
+
+"As a user, I want the ability to search my images so that I can view only the images containing specific titles or keywords."
+
+- Estimate of time needed to complete:
+- Start time:
+- Finish time: 
+- Actual time needed to complete:
