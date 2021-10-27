@@ -12,9 +12,29 @@ code {
     monospace;
 }
 
-
-
-div.row {
-  --bs-gutter-y: 75px;
+main {
+  padding: 5% 0;
+  background-image: url(./grid-bg.png)
 }
 
+footer {
+  height: 100px;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+div.row {
+  align-items: stretch;
+  row-gap: 75px;
+}
+div.col {
+  display: flex;
+  justify-content: center;
+}
+.card {
+box-shadow:
+  0.9px 1.3px 2.5px rgba(0, 0, 0, 0.028),
+  3.1px 4.5px 8.3px rgba(0, 0, 0, 0.042),
+  14px 20px 37px rgba(0, 0, 0, 0.07)
+;
+}

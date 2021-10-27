@@ -12,16 +12,16 @@ class HornedBeasts extends Component {
 
   render() {
     return (
-      <div id="beast">
+      <>
         <Card style={{width: '18rem'}}>
           <Card.Img variant="top" src={this.props.imageUrl} onClick={() => this.setState({numClicks: this.state.numClicks + 1})} />
           <Card.Body>
             <Card.Title>{this.props.title}</Card.Title>
             <Card.Text>{this.props.description}</Card.Text>
-            <Card.Text>❤️{this.state.numClicks}</Card.Text>
+            <Card.Text>&#10084;&nbsp;{this.state.numClicks}</Card.Text>
           </Card.Body>
         </Card>
-      </div>
+      </>
     )
   };
 }

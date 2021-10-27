@@ -42,3 +42,8 @@ Number and name of feature: #3 Make it Pretty
 - Start time: 1:27PM
 - Finish time: 3:00PM
 - Actual time needed to complete: 1.5 hours -- thanks CSS
+
+### Stretch Goal: Add Interaction
+
+- Added a dropdown theme chooser to the nav that let's the user choose one of three navbar themes. 
+- Added a clickable footer that chooses a random color from an array of hard-coded colors.
