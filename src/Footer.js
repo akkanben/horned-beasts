@@ -21,8 +21,9 @@ class Footer extends Component {
         'slateblue',
       ],
     };
-    this.handleClick = () => this.setState({colorIndex: Math.floor(Math.random() * this.state.colors.length)})
   }
+
+  handleClick = () => this.setState({colorIndex: Math.floor(Math.random() * this.state.colors.length)})
 
   render() {
     return (
