@@ -14,6 +14,7 @@ export default class App extends Component {
       activeImg: '',
       activeTitle: '',
       activeDescription: '',
+      value: '',
     };
   }
 
@@ -23,11 +24,14 @@ export default class App extends Component {
 
   hideModal = () => this.setState({show: false});
 
+
+  updateActiveFilter = (filter) => this.setState({value: filter})
+
   render() {
     return (
       <>
-        <Header />
-        <Main data={data} activeImg={this.state.url} show={this.state.show} showModal={this.showModal} hideModal={this.hideModal} />
+        <Header updateActiveFilter={this.updateActiveFilter} value={this.state.value} />
+        <Main data={data} value={this.state.value} activeImg={this.state.url} show={this.state.show} showModal={this.showModal} hideModal={this.hideModal} />
         <SelectedBeast
           hideModal={this.hideModal}
           show={this.state.show}

@@ -58,6 +58,8 @@ Number and name of feature: #3 Make it Pretty
 - Start time: 2:05PM
 - Finish time: 2:40PM
 - Actual time needed to complete: 35 minutes
+- Second Estimate to refactor: 1 hour
+- Refactoring to conform to the limitations of the project: +1.5hrs
 
 ### Stretch Goal: Fuzzy Search
 

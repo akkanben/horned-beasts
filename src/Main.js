@@ -7,12 +7,20 @@ import Col from 'react-bootstrap/Col';
 class Main extends Component {
 
   render() {
+    let filteredData = [];
+    if (this.props.value === '') {
+      filteredData = [...this.props.data];
+    } else {
+      filteredData = this.props.data.filter(element => element.title.includes(this.props.value) || element.description.includes(this.props.value));
+    }
+    console.log(filteredData)
+
     return (
       <main>
         <Container fluid>
           <Row>
             {
-              this.props.data.map((element, index) => {
+              filteredData.map((element, index) => {
                 return (
                   <Col key={index} >
                     <HornedBeasts

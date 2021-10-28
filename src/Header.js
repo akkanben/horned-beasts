@@ -3,6 +3,8 @@ import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Nav from "react-bootstrap/Nav";
+import Form from "react-bootstrap/Form";
+import FormControl from "react-bootstrap/FormControl";
 
 class Header extends Component {
 
@@ -13,6 +15,8 @@ class Header extends Component {
       bg: 'light',
     }
   }
+
+  handleChange = (e) => this.props.updateActiveFilter(e.target.value);
 
   render() {
     return (
@@ -32,9 +36,15 @@ class Header extends Component {
                   <NavDropdown.Item onClick={() => this.setState({bg: 'primary', theme: 'dark'})}>Fun Theme</NavDropdown.Item>
                 </NavDropdown>
               </Nav>
-              <Nav>
-                <Nav.Link href="#about">About</Nav.Link>
-              </Nav>
+              <Form className="d-flex">
+                <FormControl
+                  type="search"
+                  value={this.props.value}
+                  className="me-2"
+                  aria-label="Search"
+                  onChange={this.handleChange}
+                />
+              </Form>
             </Navbar.Collapse>
           </Container>
         </Navbar>

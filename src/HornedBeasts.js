@@ -1,5 +1,6 @@
 import {Component} from "react";
-import Card from 'react-bootstrap/Card'
+import Card from 'react-bootstrap/Card';
+import heart from './heart.png';
 
 class HornedBeasts extends Component {
 
@@ -24,7 +25,7 @@ class HornedBeasts extends Component {
           <Card.Body>
             <Card.Title>{this.props.title}</Card.Title>
             <Card.Text>{this.props.description}</Card.Text>
-            <Card.Text onClick={this.incrementClicks}>&#10084;&nbsp;{this.state.numClicks}</Card.Text>
+            <Card.Text ><img src={heart} alt="heart" onClick={this.incrementClicks} />&nbsp;{this.state.numClicks}</Card.Text>
           </Card.Body>
         </Card>
       </>
