@@ -3,6 +3,8 @@ import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Nav from "react-bootstrap/Nav";
+import Form from "react-bootstrap/Form";
+import FormControl from "react-bootstrap/FormControl";
 
 class Header extends Component {
 
@@ -14,10 +16,12 @@ class Header extends Component {
     }
   }
 
+  handleChange = (e) => this.props.updateActiveFilter(e.target.value);
+
   render() {
     return (
       <header>
-        <Navbar collapseOnSelect expand="lg" bg={this.state.bg} variant={this.state.theme}>
+        <Navbar collapseOnSelect expand="lg" bg={this.props.theme.bg} variant={this.props.theme.variant}>
           <Container>
             <Navbar.Brand href="#home">Horned Beasts</Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -26,15 +30,22 @@ class Header extends Component {
                 <Nav.Link href="#lorem">Lorem</Nav.Link>
                 <Nav.Link href="#ipsum">Impsum</Nav.Link>
                 <NavDropdown title="Theme" id="collasible-nav-dropdown">
-                  <NavDropdown.Item onClick={() => this.setState({bg: 'light', theme: 'light'})}>Light Theme</NavDropdown.Item>
-                  <NavDropdown.Item onClick={() => this.setState({bg: 'dark', theme: 'dark'})}>Dark Theme</NavDropdown.Item>
+                  <NavDropdown.Item onClick={() => this.props.changeTheme('light', 'light', 'white', '#f8f9fa')}>Light Theme</NavDropdown.Item>
+                  <NavDropdown.Item onClick={() => this.props.changeTheme('dark', 'dark', '#484848', '#212529')}>Dark Theme</NavDropdown.Item>
                   <NavDropdown.Divider />
-                  <NavDropdown.Item onClick={() => this.setState({bg: 'primary', theme: 'dark'})}>Fun Theme</NavDropdown.Item>
+                  <NavDropdown.Item onClick={() => this.props.changeTheme('primary', 'dark', '#5398fd', '#0d6efd')}>Blue Theme</NavDropdown.Item>
                 </NavDropdown>
               </Nav>
-              <Nav>
-                <Nav.Link href="#about">About</Nav.Link>
-              </Nav>
+              <Nav.Link disabled>Filter:</Nav.Link>
+              <Form className="d-flex">
+                <FormControl
+                  type="search"
+                  value={this.props.value}
+                  className="me-2"
+                  aria-label="Search"
+                  onChange={this.handleChange}
+                />
+              </Form>
             </Navbar.Collapse>
           </Container>
         </Navbar>
