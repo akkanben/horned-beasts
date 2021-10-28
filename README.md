@@ -65,7 +65,5 @@ Number and name of feature: #3 Make it Pretty
 
 "As a user, I want the ability to search my images so that I can view only the images containing specific titles or keywords."
 
-- Estimate of time needed to complete:
-- Start time:
-- Finish time: 
-- Actual time needed to complete:
+- Estimate of time needed to complete: 1 hour
+- Actual time needed to complete: 2.5 hours
