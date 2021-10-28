@@ -14,13 +14,17 @@ code {
 
 main {
   padding: 5% 0;
-  background-image: url(./grid-bg.png)
+  background-image: url(./grid-bg.png);
 }
 
 footer {
   height: 100px;
   text-align: center;
   font-size: 1.5em;
+  color: lightgrey;
+}
+footer p {
+  padding-top: 2rem;
 }
 
 div.row {
@@ -37,5 +41,4 @@ box-shadow:
   3.1px 4.5px 8.3px rgba(0, 0, 0, 0.042),
   14px 20px 37px rgba(0, 0, 0, 0.07)
 ;
-background-color: 'red';
 }

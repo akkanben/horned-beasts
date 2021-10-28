@@ -15,6 +15,7 @@ export default class App extends Component {
       activeTitle: '',
       activeDescription: '',
       value: '',
+      theme: {bg: 'light', variant: 'light', mainColor: 'white', footerColor: '#f8f9fa'},
     };
   }
 
@@ -24,14 +25,26 @@ export default class App extends Component {
 
   hideModal = () => this.setState({show: false});
 
-
   updateActiveFilter = (filter) => this.setState({value: filter})
+
+  changeTheme = (bg, variant, mainColor, footerColor) => this.setState({theme: {bg: bg, variant: variant, mainColor: mainColor, footerColor: footerColor}});
 
   render() {
     return (
       <>
-        <Header updateActiveFilter={this.updateActiveFilter} value={this.state.value} />
-        <Main data={data} value={this.state.value} activeImg={this.state.url} show={this.state.show} showModal={this.showModal} hideModal={this.hideModal} />
+        <Header
+          updateActiveFilter={this.updateActiveFilter}
+          changeTheme={this.changeTheme}
+          theme={this.state.theme}
+          value={this.state.value} />
+        <Main
+          data={data}
+          value={this.state.value}
+          theme={this.state.theme}
+          activeImg={this.state.url}
+          show={this.state.show}
+          showModal={this.showModal}
+          hideModal={this.hideModal} />
         <SelectedBeast
           hideModal={this.hideModal}
           show={this.state.show}
@@ -39,7 +52,7 @@ export default class App extends Component {
           title={this.state.activeTitle}
           description={this.state.activeDescription}
         />
-        <Footer />
+        <Footer theme={this.state.theme} />
       </>
     )
   }

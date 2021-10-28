@@ -16,7 +16,7 @@ class Main extends Component {
     console.log(filteredData)
 
     return (
-      <main>
+      <main style={{backgroundColor: this.props.theme.mainColor}}>
         <Container fluid>
           <Row>
             {
