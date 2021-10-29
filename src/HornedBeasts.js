@@ -24,6 +24,7 @@ class HornedBeasts extends Component {
           <Card.Img variant="top" src={this.props.imageUrl} onClick={this.handleClick} />
           <Card.Body>
             <Card.Title>{this.props.title}</Card.Title>
+            <Card.Text>Horns: {this.props.horns}</Card.Text>
             <Card.Text>{this.props.description}</Card.Text>
             <Card.Text ><img src={heart} alt="heart" onClick={this.incrementClicks} />&nbsp;{this.state.numClicks}</Card.Text>
           </Card.Body>

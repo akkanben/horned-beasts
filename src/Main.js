@@ -8,12 +8,21 @@ class Main extends Component {
 
   render() {
     let filteredData = [];
-    if (this.props.value === '') {
+    if (this.props.value === '' && this.props.horns === 'all') {
       filteredData = [...this.props.data];
+      console.log("everything");
     } else {
-      filteredData = this.props.data.filter(element => element.title.includes(this.props.value) || element.description.includes(this.props.value));
+      if (this.props.horns === 'all') {
+        filteredData = this.props.data.filter(element => element.title.match(new RegExp(this.props.value, 'i')) || element.description.match(new RegExp(this.props.value, 'i')));
+        console.log("just text filter")
+      } else {
+        filteredData = this.props.data.filter(element => element.horns.toString() === this.props.horns).filter(element => element.title.match(new RegExp(this.props.value, 'i')) || element.description.match(new RegExp(this.props.value, 'i')));
+        console.log("text filter and horn filter")
+        console.log(filteredData)
+
+      }
+
     }
-    console.log(filteredData)
 
     return (
       <main style={{backgroundColor: this.props.theme.mainColor}}>
@@ -27,6 +36,7 @@ class Main extends Component {
                       title={element.title}
                       imageUrl={element.image_url}
                       description={element.description}
+                      horns={element.horns}
                       showModal={this.props.showModal}
                       hideModal={this.props.hideModal}
                       show={this.props.show}
