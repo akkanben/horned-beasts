@@ -10,18 +10,12 @@ class Main extends Component {
     let filteredData = [];
     if (this.props.value === '' && this.props.horns === 'all') {
       filteredData = [...this.props.data];
-      console.log("everything");
     } else {
       if (this.props.horns === 'all') {
         filteredData = this.props.data.filter(element => element.title.match(new RegExp(this.props.value, 'i')) || element.description.match(new RegExp(this.props.value, 'i')));
-        console.log("just text filter")
       } else {
         filteredData = this.props.data.filter(element => element.horns.toString() === this.props.horns).filter(element => element.title.match(new RegExp(this.props.value, 'i')) || element.description.match(new RegExp(this.props.value, 'i')));
-        console.log("text filter and horn filter")
-        console.log(filteredData)
-
       }
-
     }
 
     return (

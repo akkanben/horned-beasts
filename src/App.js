@@ -15,7 +15,7 @@ export default class App extends Component {
       activeTitle: '',
       activeDescription: '',
       value: '',
-      horns: '1',
+      horns: 'all',
       theme: {bg: 'light', variant: 'light', mainColor: 'white', footerColor: '#f8f9fa'},
     };
   }
