@@ -8,15 +8,10 @@ import FormControl from "react-bootstrap/FormControl";
 
 class Header extends Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      theme: 'light',
-      bg: 'light',
-    }
-  }
-
   handleChange = (e) => this.props.updateActiveFilter(e.target.value);
+  handleHornChange = (e) => {
+    this.props.updateHornFilter(e.target.value);
+  }
 
   render() {
     return (
@@ -36,12 +31,21 @@ class Header extends Component {
                   <NavDropdown.Item onClick={() => this.props.changeTheme('primary', 'dark', '#5398fd', '#0d6efd')}>Blue Theme</NavDropdown.Item>
                 </NavDropdown>
               </Nav>
-              <Nav.Link disabled>Filter:</Nav.Link>
+              <Form className="d-flex">
+                <Form.Select onChange={this.handleHornChange} aria-label="Floating label select example">
+                  <option value="all">All</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                  <option value="100">One Hundred</option>
+                </Form.Select>
+              </Form>
               <Form className="d-flex">
                 <FormControl
                   type="search"
                   value={this.props.value}
                   className="me-2"
+                  placeholder="Filter by Text"
                   aria-label="Search"
                   onChange={this.handleChange}
                 />
@@ -49,7 +53,7 @@ class Header extends Component {
             </Navbar.Collapse>
           </Container>
         </Navbar>
-      </header>
+      </header >
     )
   };
 }

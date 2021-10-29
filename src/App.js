@@ -15,6 +15,7 @@ export default class App extends Component {
       activeTitle: '',
       activeDescription: '',
       value: '',
+      horns: 'all',
       theme: {bg: 'light', variant: 'light', mainColor: 'white', footerColor: '#f8f9fa'},
     };
   }
@@ -27,6 +28,8 @@ export default class App extends Component {
 
   updateActiveFilter = (filter) => this.setState({value: filter})
 
+  updateHornFilter = (numHorn) => this.setState({horns: numHorn});
+
   changeTheme = (bg, variant, mainColor, footerColor) => this.setState({theme: {bg: bg, variant: variant, mainColor: mainColor, footerColor: footerColor}});
 
   render() {
@@ -34,6 +37,7 @@ export default class App extends Component {
       <>
         <Header
           updateActiveFilter={this.updateActiveFilter}
+          updateHornFilter={this.updateHornFilter}
           changeTheme={this.changeTheme}
           theme={this.state.theme}
           value={this.state.value} />
@@ -42,6 +46,7 @@ export default class App extends Component {
           value={this.state.value}
           theme={this.state.theme}
           activeImg={this.state.url}
+          horns={this.state.horns}
           show={this.state.show}
           showModal={this.showModal}
           hideModal={this.hideModal} />
