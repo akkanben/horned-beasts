@@ -67,3 +67,14 @@ Number and name of feature: #3 Make it Pretty
 
 - Estimate of time needed to complete: 1 hour
 - Actual time needed to complete: 2.5 hours
+
+## Class 04
+
+### Feature 1 Filter by Number of Horns
+
+"As a user, I want to be able to view the beasts by the number of horns"
+
+- Estimate of time needed to complete: 1 hour
+- Start time: 3:30PM
+- Finish time: 5:30PM
+- Actual time needed to complete: 2 hours
